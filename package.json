@@ -1,0 +1,48 @@
+{
+  "name": "recast.ly",
+  "version": "1.1.0",
+  "description": "Making YouTube with React and ES6",
+  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "test": "live-server --open=./SpecRunner.html --port=8081",
+    "start": "live-server",
+    "build": "webpack -d --watch"
+  },
+  "dependencies": {
+    "babel-core": "6.24.1",
+    "babel-plugin-react": "1.0.0",
+    "babel-preset-react": "6.24.1",
+    "bootstrap": "^4.0.0-alpha.2",
+    "enzyme-redux": "^0.1.7",
+    "jquery": "^2.2.1",
+    "lodash": "^4.6.1",
+    "popper.js": "^1.12.9",
+    "react": "^15.6.1",
+    "react-dom": "^15.4.2",
+    "react-redux": "^5.0.6",
+    "redux": "^3.6.0",
+    "redux-thunk": "2.2.0",
+    "thunk": "0.0.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.6.5",
+    "babel-core": "6.24.1",
+    "babel-loader": "7.0.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "6.24.1",
+    "chai": "^3.5.0",
+    "enzyme": "2.8.2",
+    "exports-loader": "0.6.4",
+    "mocha": "2.3.3",
+    "react-addons-test-utils": "15.6.0",
+    "react-dom": "0.14.9",
+    "redux-mock-store": "1.2.3",
+    "redux-test-utils": "0.1.2",
+    "sinon": "1.15.4",
+    "uglifyjs-webpack-plugin": "0.4.3",
+    "webpack": "2.6.1"
+  }
+}
