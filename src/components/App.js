@@ -2,11 +2,12 @@ import React from 'react';
 import VideoList from './VideoList.js';
 import VideoPlayer from './VideoPlayer.js';
 import Search from './Search.js';
+import store from './store.js'
 
 class App extends React.Component {
   constructor(props) {
     super(props);
-
+    // this.store = store
     this.state = {
       videos: [],
       currentVideo: null

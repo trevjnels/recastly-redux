@@ -6,6 +6,8 @@ describe('store', function() {
   it('should be an instance of a redux store', function() {
     var expected = Object.keys(mockStore);
     var actual = Object.keys(store);
+    console.log('expected', expected )
+    console.log('actual', actual)
     expect(actual).to.deep.equal(expected);
   });
   it('should have a state with a .currentVideo field', function() {
@@ -18,3 +20,7 @@ describe('store', function() {
     expect(store.dispatch.bind(store, mockThunk())).to.not.throw();
   });
 });
+
+
+
+
