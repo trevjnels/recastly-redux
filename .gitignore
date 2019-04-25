@@ -1,6 +1,6 @@
 
 ## Mac OSX ##
-.DS_Store
+DS_Store
 
 ## NPM ##
 node_modules/
@@ -12,5 +12,4 @@ dist/
 ## API keys ##
 src/config/youtube.js
 compiled/config/youtube.js
-
 
