@@ -5,30 +5,43 @@ import YOUTUBE_API_KEY from '../config/youtube.js';
 
 
 var handleVideoSearch = (q) => {
-  let object = {
+
+  let options = {
     key: YOUTUBE_API_KEY, 
     query: q
   };
 
-  // return (dispatch) => {
-  //   dispatch(changeVideo)
-  // }
-
-  // var options = 
-  return searchYouTube(object, function(videos) {
-    // console.log('these are the videos', videos);
-    // var ouput = {};
-    // output['type'] = '';
-    // output['videos'] = video
-    // var changeVideoAction = changeVideo(videos[0]);
-    // dispatch(changeVideoAction)
-    return changeVideoList(videos); 
-    
-  // return options;
-  });
+  return (dispatch) => {
+    const request = searchYouTube(options, (videos) => {
+      dispatch(changeVideo(videos[0]));
+      dispatch(changeVideoList(videos));
+    });  
+  };
 };
+//   let object = {
+//     key: YOUTUBE_API_KEY, 
+//     query: q
+//   };
 
-// getYouTubeVideos(query) {
+//   // return (dispatch) => {
+//   //   dispatch(changeVideo)
+//   // }
+
+//   // var options = 
+//   return searchYouTube(object, function(videos) {
+//     // console.log('these are the videos', videos);
+//     // var ouput = {};
+//     // output['type'] = '';
+//     // output['videos'] = video
+//     // var changeVideoAction = changeVideo(videos[0]);
+//     // dispatch(changeVideoAction)
+//     return changeVideoList(videos); 
+    
+//   // return options;
+//   });
+// };
+
+// // getYouTubeVideos(query) {
 //   var options = {
 //     key: this.props.API_KEY,
 //     query: query
@@ -44,26 +57,26 @@ var handleVideoSearch = (q) => {
 
 export default handleVideoSearch;
 
-var searchYouTube = ({key, query, max = 5}, callback) => {
-  $.get('https://www.googleapis.com/youtube/v3/search', {
-    part: 'snippet',
-    key: key,
-    q: query,
-    maxResults: max,
-    type: 'video',
-    videoEmbeddable: 'true'
-  })
-    .done(({items}) => {
-      if (callback) {
-        callback(videosARRY);
-      }
-    })
-    .fail(({responseJSON}) => {
-      responseJSON.error.errors.forEach((err) =>
-        console.error(err)
-      );
-    });
-};
+// var searchYouTube = ({key, query, max = 5}, callback) => {
+//   $.get('https://www.googleapis.com/youtube/v3/search', {
+//     part: 'snippet',
+//     key: key,
+//     q: query,
+//     maxResults: max,
+//     type: 'video',
+//     videoEmbeddable: 'true'
+//   })
+//     .done(({items}) => {
+//       if (callback) {
+//         callback(videosARRY);
+//       }
+//     })
+//     .fail(({responseJSON}) => {
+//       responseJSON.error.errors.forEach((err) =>
+//         console.error(err)
+//       );
+//     });
+// };
 
 // export default searchYouTube;
 
