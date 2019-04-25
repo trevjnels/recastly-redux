@@ -12,3 +12,6 @@ dist/
 ## API keys ##
 src/config/youtube.js
 compiled/config/youtube.js
+
+
+src/actions/search.js
