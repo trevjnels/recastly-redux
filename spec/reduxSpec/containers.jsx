@@ -4,7 +4,6 @@ import { Provider } from 'react-redux';
 import { mount, shallow } from 'enzyme';
 import { shallowWithStore } from 'enzyme-redux';
 import { changeVideoList, mockReducer } from './reduxMocks.jsx';
-
 import SearchContainer from '../../src/containers/SearchContainer.js';
 import VideoListContainer from '../../src/containers/VideoListContainer.js';
 import VideoPlayerContainer from '../../src/containers/VideoPlayerContainer.js';

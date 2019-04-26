@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App.js';
-import searchYouTube from './lib/searchYouTube.js';
-import YOUTUBE_API_KEY from './config/youtube.js';
-
+import {Provider} from 'react-redux';
+import store from './store/store.js'
+import handleVideoSearch from './actions/search.js';
 //TODO: Import the Provider component from 'react-redux' here!
 
-//TODO: Use the Provider component to make your store available to
+//TODO: Use the Provider component t make your store available to
 //  the rest of your app.
 
 ReactDOM.render(
-  <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
-  document.getElementById('app')
+  <Provider store={store}>
+  <App />
+  </Provider>, 
+  document.getElementById('app'), () => handleVideoSearch('cat videos')(store.dispatch)
 );
+
+
