@@ -36,7 +36,7 @@
     "chai": "^3.5.0",
     "enzyme": "2.8.2",
     "exports-loader": "0.6.4",
-    "mocha": "2.3.3",
+    "mocha": "10.1.0",
     "react-addons-test-utils": "15.6.0",
     "react-dom": "0.14.9",
     "redux-mock-store": "1.2.3",
