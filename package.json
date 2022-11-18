@@ -43,6 +43,6 @@
     "redux-test-utils": "0.1.2",
     "sinon": "1.15.4",
     "uglifyjs-webpack-plugin": "0.4.3",
-    "webpack": "2.6.1"
+    "webpack": "5.75.0"
   }
 }
